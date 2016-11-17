@@ -5,12 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexRT = /^\/example1/; botRegexJN = /^\/trade/; botRegexDL = /^\//i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
-      botRegexAd=/^\/advance/; botRegexGTA = /^\//; botRegexSC = /^\//i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\//; botRegexSh = /^\/shrug/; botRegexWk = /^\//; botRegexCC = /^\//;
-      botRegexSiege = /^\//;
-      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
-      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
+      botRegexRT = /^\/example1/; botRegexJN = /^\/trade/; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
+      botRegexAd=/^\/advance/; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
