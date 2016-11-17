@@ -5,10 +5,10 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexRT = /^\/rolltide/; botRegexJN = /^\/2016 SB Winner/; botRegexDL = /^\/DDL/i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
-      botRegexAd=/^\/advance/; botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSiege = /^\/siege/;
+      botRegexRT = /^\/example1/; botRegexJN = /^\/trade/; botRegexDL = /^\//i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
+      botRegexAd=/^\/advance/; botRegexGTA = /^\//; botRegexSC = /^\//i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\//; botRegexSh = /^\/shrug/; botRegexWk = /^\//; botRegexCC = /^\//;
+      botRegexSiege = /^\//;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -36,7 +36,7 @@ function respond() {
   }
   else if(request.text && botRegexJN.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("San Antonio Marshalls #Destiny");
+    postMessage("To Submit a Trade click: https://goo.gl/forms/6Jelu8s4PaZvWqZT2");
     this.res.end();
   }
   else if(request.text && botRegexAd.test(request.text)) {
@@ -46,7 +46,7 @@ function respond() {
   }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
+    postMessage("https://docs.google.com/document/d/1tErH677Fci8qNibcwZerIW71EeW8F58X4gn72ZFiStw/edit");
     this.res.end();
   } 
   else if(request.text && botRegexGTA.test(request.text)) {
@@ -63,7 +63,7 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/LOA/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/maddenrating?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
